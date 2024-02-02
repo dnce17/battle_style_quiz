@@ -35,7 +35,22 @@ class Quiz:
     
     @classmethod
     def total_questions(cls):
-        return len(cls.data)
+        return f"Total Questions: {len(cls.data)}"
+
+    # Get max total of each role
+    @classmethod
+    def max_roles_total(cls):
+        # If there is more role types than you initially put in, there is a typo in question.json somewhere
+        roles = {}
+        for _, question in enumerate(cls.data):
+            for _, choice_role in enumerate(question["choices_and_roles"]):
+                # [1:] b/c some choice linked with > 1 roles
+                for role in choice_role[1:]:
+                    if role not in roles:
+                        roles[role] = 1
+                    else:
+                        roles[role] += 1
+        return roles
 
     @staticmethod
     def _ask_question(num, question):
@@ -93,7 +108,7 @@ class Quizzee:
 
 
 if __name__ == "__main__":
-    print(Quiz.total_questions())
+    print(Quiz.max_roles_total())
     # user = Quizzee()
     # Quiz.do_quiz(user)
     # user._show_results()
