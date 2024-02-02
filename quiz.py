@@ -27,11 +27,6 @@ class Quiz:
                     role_arr = question["choices_and_roles"][int(ans) - 1][1:]
                     quizzee._add_role_pts(*role_arr)
                     break
-
-            # For simplicity in testing, will ensure things work with 1 question and its choices and role
-            # break
-        
-        # Show user their results and tell them what role they are
     
     @classmethod
     def total_questions(cls):
@@ -97,20 +92,8 @@ class Quizzee:
                 self._supporter += 1
             else:
                 sys.exit("ERROR: no role match")
-        
-        # Test purposes - display all properties
-        print(vars(self))
     
-    # show_results instead of __str__ actually cause func name is clear
     def _show_results(self):
         results_list = sorted(vars(self).items(), key=lambda role: role[1], reverse=True)
         for role in dict(results_list):
             print(f"{role.lstrip('_').title().replace('_', '-')}: {vars(self)[role]}")
-
-
-if __name__ == "__main__":
-    print(Quiz.max_roles_total())
-    user = Quizzee()
-    Quiz.do_quiz(user)
-    user._show_results()
-

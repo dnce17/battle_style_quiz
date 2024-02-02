@@ -9,7 +9,6 @@ def q():
 def quizzee():
     return Quizzee()
 
-
 def test_valid_ans(q):
     total_choices = 5
     assert q._validate_ans("1", total_choices) == True
@@ -35,13 +34,3 @@ def test_add_role_pts(quizzee):
     assert quizzee._all_rounder == 1
     assert quizzee._defender == 1
     assert quizzee._supporter == 1
-
-    
-
-    
-
-
-
-
-
-
