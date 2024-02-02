@@ -22,3 +22,7 @@ def show_quiz_purpose():
 
 def start_quiz():
     return True if input("Type and enter \"y\" to get started: ").strip().lower() == "y" else False
+
+
+if __name__ == "__main__":
+    main()
