@@ -29,7 +29,7 @@ class Quiz:
                     break
 
             # For simplicity in testing, will ensure things work with 1 question and its choices and role
-            break
+            # break
         
         # Show user their results and tell them what role they are
 
@@ -91,6 +91,6 @@ class Quizzee:
 
 if __name__ == "__main__":
     user = Quizzee()
-    user._show_results()
     Quiz.do_quiz(user)
+    user._show_results()
 
