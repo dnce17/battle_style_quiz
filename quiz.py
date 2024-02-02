@@ -1,13 +1,13 @@
 import json
 
-class Quiz():
+class Quiz:
 
     with open("questions.json") as file:
         data = json.load(file)
 
     # All questions and entering answers occur here
     @classmethod
-    def quiz(cls):
+    def do_quiz(cls):
         for i, question in enumerate(cls.data):
             # Ask 1 question at a time
             cls._ask_question(i, question["question"])
@@ -39,7 +39,7 @@ class Quiz():
 
     @staticmethod
     def _get_ans():
-        return input("Enter a number that corresponds with the choices: "
+        return input("Enter a number that corresponds with the choices: ")
             
     @staticmethod
     def _validate_ans(ans, total_choices):
@@ -53,5 +53,5 @@ class Quiz():
 
 
 if __name__ == "__main__":
-    Quiz.quiz()
+    Quiz.do_quiz()
 

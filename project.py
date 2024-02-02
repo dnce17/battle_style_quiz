@@ -1,7 +1,11 @@
+from quiz import Quiz
+
 def main():
     show_quiz_purpose()
-    while start_quiz() == False:
+    while ready() == False:
         continue
+
+    Quiz.do_quiz()
 
     # General idea of how program will operate (subject to change)
     # ask_questions()
@@ -20,7 +24,7 @@ def show_quiz_purpose():
     ) 
 
 
-def start_quiz():
+def ready():
     return True if input("Type and enter \"y\" to get started: ").strip().lower() == "y" else False
 
 
