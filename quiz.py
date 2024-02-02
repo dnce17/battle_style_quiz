@@ -51,6 +51,17 @@ class Quiz:
         
         return True
 
+class Quizzee:
+    def __init__(self):
+        self._attacker = 0
+        self._all_rounder = 0
+        self._defender = 0
+        self._supporter = 0
+    
+    # __str__ should show the results for all battle style and tell them what role they are suited for
+
+    # instance method to add 1 to a property above depending on quizzee input to each question
+
 
 if __name__ == "__main__":
     Quiz.do_quiz()
