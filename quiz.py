@@ -62,8 +62,6 @@ class Quizzee:
         self._all_rounder = 0
         self._defender = 0
         self._supporter = 0
-    
-    # __str__ should show the results for all battle style and tell them what role they are suited for
 
     # Add 1 to property/ies above depending on quizzee input to each question
     # Unpacking the roles arr
@@ -81,11 +79,12 @@ class Quizzee:
                 sys.exit("ERROR: no role match")
         
         # Test purposes - display all properties
-        print(vars(self))
+        # print(vars(self))
     
     # show_results instead of __str__ actually cause func name is clear
     def _show_results(self):
-        for role in vars(self):
+        results_list = sorted(vars(self).items(), key=lambda role: role[1], reverse=True)
+        for role in dict(results_list):
             print(f"{role.lstrip('_').title().replace('_', '-')}: {vars(self)[role]}")
 
 
