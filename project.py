@@ -1,5 +1,6 @@
 from quiz import Quiz, Quizzee
 
+
 def main():
     show_quiz_purpose()
     while ready() == False:

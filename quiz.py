@@ -1,6 +1,7 @@
 import json
 import sys
 
+
 class Quiz:
     with open("questions.json") as file:
         data = json.load(file)
@@ -26,7 +27,6 @@ class Quiz:
                     role_arr = question["choices_and_roles"][int(ans) - 1][1:]
                     quizzee.add_role_point(*role_arr)
                     break
-
 
             # For simplicity in testing, will ensure things work with 1 question and its choices and role
             break
