@@ -8,14 +8,7 @@ def main():
 
     user = Quizzee()
     Quiz.do_quiz(user)
-
-    # General idea of how program will operate (subject to change)
-    # ask_questions()
-    # get_answers()
-    # update_points()
-    # tally_points()
-    # show_results
-
+    
 
 def show_quiz_purpose():
     print(
