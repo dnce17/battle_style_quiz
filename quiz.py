@@ -32,6 +32,10 @@ class Quiz:
             # break
         
         # Show user their results and tell them what role they are
+    
+    @classmethod
+    def total_questions(cls):
+        return len(cls.data)
 
     @staticmethod
     def _ask_question(num, question):
@@ -89,7 +93,8 @@ class Quizzee:
 
 
 if __name__ == "__main__":
-    user = Quizzee()
-    Quiz.do_quiz(user)
-    user._show_results()
+    print(Quiz.total_questions())
+    # user = Quizzee()
+    # Quiz.do_quiz(user)
+    # user._show_results()
 
