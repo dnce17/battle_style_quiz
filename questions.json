@@ -1,4 +1,22 @@
 [
+    {
+        "question": "How would you describe yourself in real life out of these options?",
+        "choices_and_roles": [
+            [
+                "I have no preference in leading, assisting, and supporting. I fill in whatever is needed of me.",
+                "all-rounder"
+            ],
+            [
+                "I prefer to assist and support others. I take the lead if I need to, but it’s not my ideal.",
+                "defender",
+                "supporter"
+            ],
+            [
+                "I prefer to take the lead, but will assist and support as needed",
+                "attacker"
+            ]
+        ]
+    },
 	{
         "question": "It’s a 5 vs 5 battle. Both sides are charging towards each other! As you are nearing the enemy, what do you do?",
         "choices_and_roles": [
@@ -39,24 +57,6 @@
             [
                 "Level up when I can, but mainly be on the lookout for enemies and protect my teammates when needed",
                 "defender"
-            ]
-        ]
-    },
-    {
-        "question": "How would you describe yourself in real life out of these options?",
-        "choices_and_roles": [
-            [
-                "I have no preference in leading, assisting, and supporting. I fill in whatever is needed of me.",
-                "all-rounder"
-            ],
-            [
-                "I prefer to assist and support others. I take the lead if I need to, but it’s not my ideal.",
-                "defender",
-                "supporter"
-            ],
-            [
-                "I prefer to take the lead, but will assist and support as needed",
-                "attacker"
             ]
         ]
     },

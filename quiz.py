@@ -1,7 +1,7 @@
 import json
+import sys
 
 class Quiz:
-
     with open("questions.json") as file:
         data = json.load(file)
 
@@ -20,10 +20,12 @@ class Quiz:
             # Loop until user enters elgible answer
             while True:
                 total_choices = len(question["choices_and_roles"])
-                if cls._validate_ans(cls._get_ans(), total_choices) == True:
+                ans = cls._get_ans()
+                if cls._validate_ans(ans, total_choices) == True:
+                    # Creates arr to consider the choices linked with more than 1 role
+                    role_arr = question["choices_and_roles"][int(ans) - 1][1:]
+                    quizzee.add_role_point(*role_arr)
                     break
-
-            # Add +1 to that property in User class (not yet made)
 
 
             # For simplicity in testing, will ensure things work with 1 question and its choices and role
@@ -51,6 +53,7 @@ class Quiz:
         
         return True
 
+
 class Quizzee:
     def __init__(self):
         self._attacker = 0
@@ -61,6 +64,22 @@ class Quizzee:
     # __str__ should show the results for all battle style and tell them what role they are suited for
 
     # instance method to add 1 to a property above depending on quizzee input to each question
+    # Note: take into acc choices that is linked with more than 1 role
+    def add_role_point(self, *roles):
+        for role in roles:
+            if role == "attacker":
+                self._attacker += 1
+            elif role == "all-rounder":
+                self._all_rounder += 1
+            elif role == "defender":
+                self._defender += 1
+            elif role == "supporter":
+                self._supporter += 1
+            else:
+                sys.exit("ERROR: no role match")
+        
+        # Test purposes - display all properties
+        print(vars(self))
 
 
 if __name__ == "__main__":
