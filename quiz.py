@@ -25,7 +25,7 @@ class Quiz:
                 if cls._validate_ans(ans, total_choices) == True:
                     # Creates arr to consider the choices linked with more than 1 role
                     role_arr = question["choices_and_roles"][int(ans) - 1][1:]
-                    quizzee._add_role_point(*role_arr)
+                    quizzee._add_role_pts(*role_arr)
                     break
 
             # For simplicity in testing, will ensure things work with 1 question and its choices and role
@@ -84,8 +84,9 @@ class Quizzee:
 
     # Add 1 to property/ies above depending on quizzee input to each question
     # Unpacking the roles arr
-    def _add_role_point(self, *roles_arr):
-        for role in roles_arr:
+    def _add_role_pts(self, *roles):
+        for role in roles:
+            role = role.strip()
             if role == "attacker":
                 self._attacker += 1
             elif role == "all-rounder":
@@ -98,7 +99,7 @@ class Quizzee:
                 sys.exit("ERROR: no role match")
         
         # Test purposes - display all properties
-        # print(vars(self))
+        print(vars(self))
     
     # show_results instead of __str__ actually cause func name is clear
     def _show_results(self):
@@ -109,7 +110,7 @@ class Quizzee:
 
 if __name__ == "__main__":
     print(Quiz.max_roles_total())
-    # user = Quizzee()
-    # Quiz.do_quiz(user)
-    # user._show_results()
+    user = Quizzee()
+    Quiz.do_quiz(user)
+    user._show_results()
 
