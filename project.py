@@ -1,11 +1,12 @@
-from quiz import Quiz
+from quiz import Quiz, Quizzee
 
 def main():
     show_quiz_purpose()
     while ready() == False:
         continue
 
-    Quiz.do_quiz()
+    user = Quizzee()
+    Quiz.do_quiz(user)
 
     # General idea of how program will operate (subject to change)
     # ask_questions()

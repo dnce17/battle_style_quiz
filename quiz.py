@@ -7,7 +7,7 @@ class Quiz:
 
     # All questions and entering answers occur here
     @classmethod
-    def do_quiz(cls):
+    def do_quiz(cls, quizzee):
         for i, question in enumerate(cls.data):
             # Ask 1 question at a time
             cls._ask_question(i, question["question"])
@@ -64,5 +64,6 @@ class Quizzee:
 
 
 if __name__ == "__main__":
-    Quiz.do_quiz()
+    user = Quizzee()
+    Quiz.do_quiz(user)
 
