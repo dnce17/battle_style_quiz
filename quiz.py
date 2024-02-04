@@ -27,6 +27,9 @@ class Quiz:
                     role_arr = question["choices_and_roles"][int(ans) - 1][1:]
                     quizzee._add_role_pts(*role_arr)
                     break
+        
+        quizzee._show_results()
+        print()
     
     @classmethod
     def total_questions(cls):
@@ -95,5 +98,6 @@ class Quizzee:
     
     def _show_results(self):
         results_list = sorted(vars(self).items(), key=lambda role: role[1], reverse=True)
+        print("\nRESULTS:")
         for role in dict(results_list):
             print(f"{role.lstrip('_').title().replace('_', '-')}: {vars(self)[role]}")
