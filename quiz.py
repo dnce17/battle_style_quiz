@@ -39,7 +39,6 @@ class Quiz:
     # Get max total of each role
     @classmethod
     def get_max_roles_total(cls):
-        # If there is more role types than you initially put in, there is a typo in question.json somewhere
         roles = {}
         for _, question in enumerate(cls.data):
             for _, choice_role in enumerate(question["choices_and_roles"]):
@@ -113,3 +112,11 @@ class Quizzee:
         print("\nRESULTS:")
         for role in dict(results_list):
             print(f"{role.lstrip('_').title().replace('_', '-')}: {vars(self)[role]}")
+
+
+# Runs some funcs not called in project.py (the main file)
+# Testing purpose: If there's more role types than initially put in, there's a typo in questions.json somewhere
+if __name__ == "__main__":
+    q = Quiz()
+    q.show_all_roles()
+    q.show_max_roles_total()
