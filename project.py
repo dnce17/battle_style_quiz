@@ -3,6 +3,7 @@ from quiz import Quiz, Quizzee
 
 def main():
     show_quiz_purpose()
+    Quiz.show_total_questions()
     while ready() == False:
         continue
 
