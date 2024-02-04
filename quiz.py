@@ -31,6 +31,7 @@ class Quiz:
         quizzee._show_results()
         print()
     
+    # NONPRIVATE METHODS
     @classmethod
     def total_questions(cls):
         return f"Total Questions: {len(cls.data)}"        
@@ -55,6 +56,7 @@ class Quiz:
         roles = [role for role in cls.max_roles_total()]
         print(sorted(roles))
 
+    # PRIVATE METHODS
     @staticmethod
     def _ask_question(num, question):
         print(f"\nQ{num + 1}) {question}")
