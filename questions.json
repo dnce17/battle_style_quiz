@@ -51,7 +51,7 @@
 
             ],
             [
-                "Focus on doing all three: leveling, protecting, and supporting my teammates",
+                "Focus on doing all three: leveling, protecting, and supporting my teammates. Which I do depends on the situation",
                 "all-rounder"
             ],
             [
@@ -126,6 +126,27 @@
             [
                 "I don’t usually ask people if they want to hang out first. I might provide hangout suggestions here and there, but I usually just go with whatever my friends/family decide to do.",
                 "defender"
+            ]
+        ]
+    },
+    {
+        "question": "Both you and your enemy are about to fight. You both get into a fighting stance and the battle begins! How do you start?",
+        "choices_and_roles": [
+            [
+                "Strike first",
+                "attacker"
+            ],
+            [
+                "Hold my ground and wait for the opponent to attack first",
+                "defender"
+            ],
+            [
+                "Attack only if I feel the time is right (e.g. there is an opening), wait otherwise",
+                "all-rounder"
+            ],
+            [
+                "Run away and take advantage of the environment to defeat the enemy (e.g. lure enemy into certain areas, hide behind large objects, throw rocks found on ground, wear enemy out)",
+                "supporter"
             ]
         ]
     }
