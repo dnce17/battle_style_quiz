@@ -33,7 +33,7 @@ class Quiz:
     
     @classmethod
     def total_questions(cls):
-        return f"Total Questions: {len(cls.data)}"
+        return f"Total Questions: {len(cls.data)}"        
 
     # Get max total of each role
     @classmethod
@@ -49,6 +49,11 @@ class Quiz:
                     else:
                         roles[role] += 1
         return roles
+    
+    @classmethod
+    def all_roles(cls):
+        roles = [role for role in cls.max_roles_total()]
+        print(sorted(roles))
 
     @staticmethod
     def _ask_question(num, question):
