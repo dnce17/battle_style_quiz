@@ -49,7 +49,7 @@ class Quiz:
 
     @staticmethod
     def _ask_question(num, question):
-        print(f"Q{num + 1}) {question}\n")
+        print(f"\nQ{num + 1}) {question}")
     
     @staticmethod
     def _show_choice(num, choice):
