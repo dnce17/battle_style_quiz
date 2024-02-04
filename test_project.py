@@ -14,6 +14,7 @@ def test_valid_ans(q):
     assert q._validate_ans("1", total_choices) == True
     assert q._validate_ans("5", total_choices) == True
     assert q._validate_ans("3", total_choices) == True
+    assert q._validate_ans("   3   ", total_choices) == True
 
 def test_invalid_ans(q):
     total_choices = 8
