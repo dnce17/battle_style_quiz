@@ -33,12 +33,12 @@ class Quiz:
     
     # NONPRIVATE METHODS
     @classmethod
-    def total_questions(cls):
-        return f"Total Questions: {len(cls.data)}"        
+    def show_total_questions(cls):
+        print(f"Total Questions: {len(cls.data)}")   
 
     # Get max total of each role
     @classmethod
-    def max_roles_total(cls):
+    def get_max_roles_total(cls):
         # If there is more role types than you initially put in, there is a typo in question.json somewhere
         roles = {}
         for _, question in enumerate(cls.data):
@@ -49,12 +49,17 @@ class Quiz:
                         roles[role] = 1
                     else:
                         roles[role] += 1
-        return roles
+
+        return dict(sorted(roles.items()))
     
     @classmethod
-    def all_roles(cls):
-        roles = [role for role in cls.max_roles_total()]
-        print(sorted(roles))
+    def show_max_roles_total(cls):
+        print(cls.get_max_roles_total())
+    
+    @classmethod
+    def show_all_roles(cls):
+        roles = [role for role in cls.get_max_roles_total()]
+        print(roles)
 
     # PRIVATE METHODS
     @staticmethod
