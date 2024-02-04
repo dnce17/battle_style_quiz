@@ -96,7 +96,7 @@ class Quizzee:
     # Unpacking the roles arr
     def _add_role_pts(self, *roles):
         for role in roles:
-            role = role.strip()
+            role = role.strip().lower()
             if role == "attacker":
                 self._attacker += 1
             elif role == "all-rounder":

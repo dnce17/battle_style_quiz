@@ -27,10 +27,12 @@ def test_add_role_pts(quizzee):
         "all-rounder", 
         "defender", 
         "supporter",
-        "   attacker  "
+        "   attacker  ",
+        "  DEFenDer",
+        "SUPPORTER   "
     ]
     quizzee._add_role_pts(*valid_tests)
     assert quizzee._attacker == 2
     assert quizzee._all_rounder == 1
-    assert quizzee._defender == 1
-    assert quizzee._supporter == 1
+    assert quizzee._defender == 2
+    assert quizzee._supporter == 2
