@@ -48,8 +48,7 @@
     * adjust the numbers in the assert statements if selecting an answer choice does not only increase that tracked item by 1 point (e.g. a choice that increases docile personality level by 2 and hasty by 4)
 
 ### <u> Why I Made This Project</u>
-#### I sometimes have trouble deciding what role to pick in games that have us choose, so this idea came to mind.
-
+#### I wanted to do a project that focuses on using classes, so I can practice object-oriented programming. Alongside that, I also wanted to practice creating functions that do only one thing and making more readable, organized code. While brainstorming, I remembered that I sometimes have trouble deciding what role to pick in games that include them, so this idea came to mind.
 
 
 
