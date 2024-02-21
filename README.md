@@ -1,17 +1,24 @@
 # Battle Style/Role Quiz
 
-### <u>Function</u>
+## Function
 This quiz can help people figure out what role (all-rounder, attacker, defender, supporter) to pick in games that include them such as Pokemon Unite and League of Legends.
 
-### <u> How to run/test</u>
-* Type **<u>python project.py</u>** in terminal (make sure to install all required packages in the requirements.txt before doing so)
-* If you configure the project, type **<u>pytest test_project.py</u>** to ensure everything is still working. Make sure you adjust its code to fit your configured project.
+## How to run/test
+To run, type and enter the following in terminal:
+1. source .venv/bin/activate
+    * activates the virtual env
+2. python project.py
+    * lets you take the battle style quiz
 
-### <u>Technologies Used</u>
+To test: 
+* pytest test_project.py
+    * If configurations are made to this program, run this to ensure certain functions still work properly
+
+## Technologies Used
 * Python
 * JSON
 
-### <u>Info on Key Files</u>
+## Info on Key Files
 * project.py
     * simply runs the entirety of the quiz process
 * quiz.py
@@ -25,13 +32,18 @@ This quiz can help people figure out what role (all-rounder, attacker, defender,
 * requirements.txt
     * Python packages to install for the quiz program to run properly
 
-### <u>How to Configure</u>
+## How to Configure
+<b>UPDATE</b>: After this project's completion, I developed a more user-friendly tool called [PDF to Survey/Quiz Converter](https://github.com/dnce17/pdf_to_survey_quiz). This tool allows processing of PDF-formatted surveys/quizzes made in a text processor for others to take, making it easier to create personalized surveys/quizzes since code does not have to be modified. 
+
+You can use this tool as an alternative to the instructions provided below for configuring this quiz.
+<hr>
+
 This quiz can be used as a template for answers that are associated with something, in which you may want to keep track of that.  
 
 For example, if all questions had 3 answer choices and low, medium, and high risk are associated with each choice respectively, this quiz can be altered to track how many times the user picks a choice linked with each of those risk levels.
 
 For this quiz program, each question does **not** need to have the same amount of choices. Each choice can also have more than 1 item associated with it too.
-#### ---
+
 ### To configure it...
 * questions.json
     * replace the questions with your own
@@ -47,9 +59,5 @@ For this quiz program, each question does **not** need to have the same amount o
     * adjust the test_add_role_pts() function based on your tracked items
     * adjust the numbers in the assert statements if selecting an answer choice does not only increase that tracked item by 1 point (e.g. a choice that increases docile personality level by 2 and hasty by 4)
 
-### <u> Why I Made This Project</u>
+## Project Inspiration
 I wanted to do a project that focuses on using classes, so I can practice object-oriented programming. Alongside that, I also wanted to practice creating functions that do only one thing and making more readable, organized code. While brainstorming, I remembered that I sometimes have trouble deciding what role to pick in games that include them, so this idea came to mind.
-
-
-
-
