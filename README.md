@@ -4,10 +4,14 @@
 This quiz can help people figure out what role (all-rounder, attacker, defender, supporter) to pick in games that include them such as Pokemon Unite and League of Legends.
 
 ## How to run/test
-To run, type and enter the following in terminal:
-1. source .venv/bin/activate
+To run, type and enter the following in terminal
+1. python3 -m venv .venv
+    * creates virtual environment
+2. source .venv/bin/activate
     * activates the virtual env
-2. python project.py
+3. python3 -m pip install -r requirements.txt OR pip3 install -r requirements.txt
+    * installs the packages needed to run the program
+4. python3 project.py
     * lets you take the battle style quiz
 
 To test: 
